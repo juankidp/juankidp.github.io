@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan Carlos Díaz Pérez · E-portfolio</title>
+<meta name="description" content="Portfolio de Juan Carlos Díaz Pérez, estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) en el IES Canarias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F6; --surface:#FFFFFF; --ink:#14213D; --muted:#51607A; --line:#CBD5E1; --accent:#2F5BFF; --on-accent:#FFFFFF;
+  --head:'Bricolage Grotesque',system-ui,sans-serif; --body:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1623;--surface:#18223A;--ink:#E8EDF7;--muted:#9AA8C2;--line:#2A3752;--accent:#7C9BFF;--on-accent:#0F1623}
+}
+:root[data-theme="dark"]{--bg:#0F1623;--surface:#18223A;--ink:#E8EDF7;--muted:#9AA8C2;--line:#2A3752;--accent:#7C9BFF;--on-accent:#0F1623}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+nav a{margin-right:20px;text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--accent)}
+button.theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:15px;cursor:pointer}
+.hero{padding:72px 0 56px}
+.hero h1{font:800 clamp(44px,9vw,92px)/0.98 var(--head);letter-spacing:-0.03em}
+.hero p{max-width:58ch;margin-top:24px;font-size:20px;color:var(--muted)}
+.btns{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:700;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--on-accent)}
+.btn.alt{color:var(--accent)}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font:700 32px/1.15 var(--head);letter-spacing:-0.02em;margin-bottom:24px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card h3{font:700 21px/1.2 var(--head)}
+.card p{color:var(--muted);font-size:16px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0}
+.tags li{font-size:14px;border:1px solid var(--line);border-radius:6px;padding:2px 10px;color:var(--muted)}
+.card .links{margin-top:auto;display:flex;gap:16px;font-weight:700}
+.card .links a{color:var(--accent)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}
+.skills li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 16px;font-weight:500}
+.timeline{list-style:none;padding:0;display:grid;gap:20px}
+.timeline li{display:grid;grid-template-columns:130px 1fr;gap:16px}
+.timeline time{color:var(--muted);font-size:15px}
+.timeline strong{font-family:var(--head);font-size:19px}
+.about{display:grid;gap:32px;grid-template-columns:1fr}
+@media(min-width:700px){.about{grid-template-columns:2fr 1fr}}
+.about img{width:100%;max-width:260px;border-radius:12px;border:1px solid var(--line);aspect-ratio:1;object-fit:cover;background:var(--surface)}
+footer{padding:40px 0 56px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+@media(max-width:560px){.timeline li{grid-template-columns:1fr;gap:2px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav aria-label="Principal">
+      <a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#formacion">Formación</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="theme" id="theme" type="button">Cambiar tema</button>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Hola, soy Juan Carlos Díaz Pérez.</h1>
+      <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) en el IES Canarias. Me especializo en el desarrollo de aplicaciones y aprendo construyendo proyectos reales.</p>
+      <div class="btns">
+        <a class="btn main" href="#proyectos">Ver proyectos</a>
+        <a class="btn alt" href="#contacto">Contactar</a>
+      </div>
+    </div>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante de DAM y me gusta convertir ideas en aplicaciones que funcionen de verdad. Empecé por la lógica de programación y hoy trabajo con aplicaciones de escritorio, móviles y bases de datos.</p>
+      <p style="margin-top:14px">Me motiva aprender rápido, trabajar en equipo y dejar el código limpio y documentado. Busco prácticas o una primera oportunidad profesional como desarrollador de aplicaciones.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Gestor de tareas para Android</h3>
+          <p>Aplicación móvil para organizar tareas diarias con recordatorios y categorías. Diseñé la interfaz y guardé los datos en local con una base de datos SQLite.</p>
+          <ul class="tags"><li>Kotlin</li><li>Android Studio</li><li>SQLite</li></ul>
+          <div class="links"><a href="https://github.com/juankidp">Código</a></div>
+        </article>
+        <article class="card">
+          <h3>Control de inventario de escritorio</h3>
+          <p>Programa en Java con interfaz gráfica para registrar productos, controlar el stock y generar informes. Conectado a una base de datos MySQL.</p>
+          <ul class="tags"><li>Java</li><li>JavaFX</li><li>MySQL</li></ul>
+          <div class="links"><a href="https://github.com/juankidp">Código</a></div>
+        </article>
+        <article class="card">
+          <h3>API de reservas para un gimnasio</h3>
+          <p>Servicio web que permite consultar clases y reservar plazas. Incluye validación de datos y documentación de los puntos de acceso.</p>
+          <ul class="tags"><li>Java</li><li>Spring Boot</li><li>REST</li></ul>
+          <div class="links"><a href="https://github.com/juankidp">Código</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <li>Java</li><li>Kotlin</li><li>SQL</li><li>Git y GitHub</li><li>HTML y CSS</li><li>Android Studio</li><li>Trabajo en equipo</li>
+      </ul>
+    </section>
+
+    <section id="formacion">
+      <h2>Formación y experiencia</h2>
+      <ul class="timeline">
+        <li><time>2026 – actualidad</time><div><strong>Ciclo Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</strong><br>IES Canarias</div></li>
+        <li><time>2022</time><div><strong>Bachillerato</strong></div></li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Hablamos? Escríbeme y te respondo lo antes posible.</p>
+      <div class="btns">
+        <a class="btn main" href="mailto:diazperezjuancarlos808@gmail.com">diazperezjuancarlos808@gmail.com</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/juan-carlos-díaz-pérez-01b6563b6/">LinkedIn</a>
+        <a class="btn alt" href="https://github.com/juankidp">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Juan Carlos Díaz Pérez. Hecho con HTML y CSS, alojado en GitHub Pages.</footer>
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('theme').addEventListener('click', function(){
+  var r = document.documentElement;
+  var dark = r.dataset.theme ? r.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme = dark ? 'light' : 'dark';
+});
+</script>
+</body>
+</html>
